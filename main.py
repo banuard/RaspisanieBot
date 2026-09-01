@@ -147,7 +147,6 @@ def main(page: ft.Page):
     
     # === НАСТРОЙКА ЦВЕТОВ ДЛЯ ТЁМНОЙ ТЕМЫ ===
     page.bgcolor = ft.Colors.with_opacity(1, ft.Colors.GREY_900)
-    text_color = ft.Colors.WHITE
     card_color = ft.Colors.with_opacity(1, ft.Colors.GREY_800)
     primary_color = ft.Colors.BLUE_300
     
@@ -269,4 +268,5 @@ def main(page: ft.Page):
         result_container,
     )
 
-ft.run(target=main)
+# ========== ЗАПУСК ПРИЛОЖЕНИЯ ==========
+ft.run(main)  # ← ИСПРАВЛЕНО! Теперь без target=
