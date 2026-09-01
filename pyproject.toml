@@ -1,0 +1,36 @@
+[project]
+name = "RaspisanieBot"
+version = "1.0.0"
+description = "Расписание"
+requires-python = ">=3.8"
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+    "flet"
+]
+
+[dependency-groups]
+dev = [
+    "flet-cli",
+    "flet-desktop",
+    "flet-web"
+]
+
+[tool.flet.metadata]
+title = "Расписание" # Это имя будет отображаться в интерфейсе
+
+[tool.flet]
+org = "dev.flet"
+company = "Flet"
+copyright = "Copyright (C) 2023-2026 by Flet"
+
+# === НАСТРОЙКИ ДЛЯ АНДРОИД ===
+[tool.flet.icons]
+# Путь к вашей иконке
+android = "assets/icon.png"
+
+[tool.flet.android]
+# Цвет фона для адаптивной иконки (можно изменить)
+adaptive_icon_background = "#1a1a2e"
