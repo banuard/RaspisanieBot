@@ -17,7 +17,7 @@ def get_reference_monday():
 REFERENCE_MONDAY = get_reference_monday()
 DAYS_RU = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 
-# ========== РАСПИСАНИЕ (ОБНОВЛЕНО) ==========
+# ========== РАСПИСАНИЕ ==========
 SCHEDULE = {
     "нечётная": {
         "Понедельник": [
@@ -132,7 +132,7 @@ def format_week(monday_date):
                     result += "   - - - - -\n"
         
         # === РАЗДЕЛИТЕЛЬ МЕЖДУ ДНЯМИ ===
-        if i < 4:  # после всех дней кроме последнего
+        if i < 4:
             result += "\n━━━━━━━━━━━━━━━━━━━━━\n\n"
         else:
             result += "\n"
@@ -164,7 +164,7 @@ def main(page: ft.Page):
     result_text = ft.Text(
         "Выберите день или неделю 👆",
         size=15,
-        color=ft.Colors.WHITE70,
+        color=ft.Colors.WHITE_70,  # ← ИСПРАВЛЕНО (было WHITE70)
         selectable=True,
     )
     
@@ -247,7 +247,7 @@ def main(page: ft.Page):
         **button_style
     )
     
-    # === РЯДЫ КНОПОК (ВЫРАВНИВАНИЕ ПО ЦЕНТРУ) ===
+    # === РЯДЫ КНОПОК ===
     buttons_row1 = ft.Row(
         [btn_today, btn_tomorrow],
         alignment=ft.MainAxisAlignment.CENTER,
